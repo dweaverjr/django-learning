@@ -28,7 +28,6 @@ htmlcov/
 
 # Editor and local workspace files
 .vscode/
-*.code-workspace
 
 # OS junk
 .DS_Store
