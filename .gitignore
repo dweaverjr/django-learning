@@ -27,7 +27,8 @@ htmlcov/
 .venv
 
 # Editor and local workspace files
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
 # OS junk
 .DS_Store
