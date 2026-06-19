@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Django local files
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Test and coverage outputs
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+
+# Environment and secrets
+.env
+.env.*
+
+# Virtual environments
+.venv
+
+# Editor and local workspace files
+.vscode/
+*.code-workspace
+
+# OS junk
+.DS_Store
+Thumbs.db
