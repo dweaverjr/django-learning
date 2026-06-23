@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description"
+              content="My First Application - A Django learning project demonstrating template filters">
+        <meta name="keywords" content="django, filters, template, learning">
+        <title>My First Application</title>
+    </head>
+    <body>
+        <h1>
+            <center>Filter</center>
+        </h1>
+        <ul>
+            <li>
+                <b>lower filter</b> {{ value | lower }}
+                <br>
+            </li>
+            <li>
+                <b>length filter</b> {{ value | length }}
+                <br>
+            </li>
+            <li>
+                <b>make_list filter</b> {{ value | make_list }}
+                <br>
+            </li>
+            <li>
+                <b>title filter</b> {{ value | title }}
+                <br>
+            </li>
+            <li>
+                <b>cut filter</b> {{ value | cut:" " }}
+                <br>
+            </li>
+        </ul>
+    </body>
+</html>
