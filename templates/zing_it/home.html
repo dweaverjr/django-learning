@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'zing_it/css/home.css' %}}" />
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>
+            <center>Zing It</center>
+        </h1>
+        <div class="box">
+            {% for playlist in playlists %}
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://cdn.pixabay.com/photo/2017/01/29/01/01/music-2016915_960_720.jpg"
+                         height="200" width="250"
+                         alt="images">
+                </div>
+                <div class="details">
+                    <h2>
+                        {{ playlist.name }}
+                        <br>
+                        <span>{{ playlist.numberOfSongs }} songs</span>
+                    </h2>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

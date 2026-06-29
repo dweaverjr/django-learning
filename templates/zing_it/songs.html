@@ -1,0 +1,29 @@
+{% extends "zing_it/base.html" %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'zing_it/css/songs.css' %}" />
+{% endblock css %}
+{% block title %}Songs Page{% endblock title %}
+{% block heading %}
+  <center>{{ playlist_name }}</center>
+{% endblock heading %}
+{% block content %}
+  <table>
+    <tr>
+      <th>No.</th>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Length</th>
+    </tr>
+    {% for song in songs %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ song.Track }}</td>
+        <td>{{ song.Artist }}</td>
+        <td>{{ song.Album }}</td>
+        <td>{{ song.Length }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
