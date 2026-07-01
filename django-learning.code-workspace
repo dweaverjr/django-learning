@@ -6,6 +6,6 @@
 	],
 	"settings": {
 		"djlint.useVenv": false,
-		"djlint.executablePath": "C:\\Users\\dweaver\\AppData\\Roaming\\uv\\tools\\djlint\\Scripts\\djlint.exe"
+		"djlint.executablePath": "djlint"
 	}
 }

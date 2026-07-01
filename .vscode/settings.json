@@ -1,4 +1,6 @@
 {
+    "djlint.useVenv": false,
+    "djlint.executablePath": "djlint",
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,

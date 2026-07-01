@@ -16,8 +16,13 @@ Add to `.code-workspace` settings (not `.vscode/settings.json` — doesn't apply
 
 ```json
 "djlint.useVenv": false,
-"djlint.executablePath": "C:\\Users\\<username>\\AppData\\Roaming\\uv\\tools\\djlint\\Scripts\\djlint.exe"
+"djlint.executablePath": "djlint"
 ```
+
+If you want explicit absolute path instead:
+
+- Linux/WSL: `~/.local/bin/djlint`
+- Windows: `C:\\Users\\<username>\\AppData\\Roaming\\uv\\tools\\djlint\\Scripts\\djlint.exe`
 
 Format on save is configured in `.vscode/settings.json`:
 
