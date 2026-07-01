@@ -1,33 +1,32 @@
 {% extends "zing_it/base.html" %}
-
 {% load static %}
-
-{% block css %} <link rel="stylesheet" href="{% static 'zing_it/css/home.css' %}"/> {% endblock css %}
-
+{% block css %}
+  <link rel="stylesheet" href="{% static 'zing_it/css/home.css' %}" />
+{% endblock css %}
 {% block title %} Home Page {% endblock title %}
-
 {% block heading %}
-<center>Zing It</center>
+  <center>Zing It</center>
 {% endblock heading %}
-
 {% block content %}
-
   <div class="box">
-    {% for playlist in my_playlists %}
-        <div class="card">
-          <a href="{% url 'playlist' playlist.id %}">
-            <div class="imgBx">
-                <img src="https://cdn.pixabay.com/photo/2017/01/29/01/01/music-2016915_960_720.jpg" alt="images" height="200" width="200">
-            </div>
-            <div class="details">
-                <h2>{{ playlist.name }}
-                <br>
-                <span>{{ playlist.numberOfSongs }}</span>
-              </h2>
-            </div>
-          </a>
-        </div>
+    {% for playlist in playlists %}
+      <div class="card">
+        <a href="{% url 'zing_it:playlist' playlist.id %}">
+          <div class="imgBx">
+            <img src="https://cdn.pixabay.com/photo/2017/01/29/01/01/music-2016915_960_720.jpg"
+                 alt="images"
+                 height="200"
+                 width="250">
+          </div>
+          <div class="details">
+            <h2>
+              {{ playlist.name }}
+              <br>
+              <span>{{ playlist.numberOfSongs }}</span>
+            </h2>
+          </div>
+        </a>
+      </div>
     {% endfor %}
   </div>
-
 {% endblock content %}
