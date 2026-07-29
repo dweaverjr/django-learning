@@ -8,5 +8,6 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("playlist/<int:playlist_id>/", views.playlist, name="playlist"),
     # path("about/", views.about, name="about"),
+    path("forms/", views.forms, name="forms"),
     # path("index/", views.index, name="index"),
 ]

@@ -1,7 +1,28 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
+from .forms import TestForm
+
 # Create your views here.
+initial_dict={
+        "text": "Some initial data",
+        "integer": 123,
+    }
+
+
+def forms(request: HttpRequest) -> HttpResponse:
+    form = TestForm(request.POST or None, initial=initial_dict)
+    data = None
+    text = None
+    if form.is_valid():
+        data = form.cleaned_data
+        text = data.get("text")
+
+    return render(
+        request,
+        "zing_it/forms.html",
+        {"form": form, "data": data, "text": text},
+    )
 
 
 my_playlists = [
